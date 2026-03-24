@@ -1,14 +1,14 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Room {
+class InventoryRoom {
     String type;
     int beds;
     int size;
     double price;
     int available;
 
-    public Room(String type, int beds, int size, double price, int available) {
+    public InventoryRoom(String type, int beds, int size, double price, int available) {
         this.type = type;
         this.beds = beds;
         this.size = size;
@@ -29,15 +29,13 @@ public class UseCase3InventorySetup {
     public static void main(String[] args) {
         System.out.println("Hotel Room Inventory Status\n");
 
-        List<Room> inventory = new ArrayList<>();
+        List<InventoryRoom> inventory = new ArrayList<>();
 
-        // Setup inventory data
-        inventory.add(new Room("Single Room", 1, 250, 1500.0, 5));
-        inventory.add(new Room("Double Room", 2, 400, 2500.0, 3));
-        inventory.add(new Room("Suite Room", 3, 750, 5000.0, 2));
+        inventory.add(new InventoryRoom("Single Room", 1, 250, 1500.0, 5));
+        inventory.add(new InventoryRoom("Double Room", 2, 400, 2500.0, 3));
+        inventory.add(new InventoryRoom("Suite Room", 3, 750, 5000.0, 2));
 
-        // Display the current status
-        for (Room room : inventory) {
+        for (InventoryRoom room : inventory) {
             room.displayStatus();
         }
     }
